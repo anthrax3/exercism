@@ -1,7 +1,12 @@
-var isLeapYear =function() {};
+var isLeapYear = function(year) {
 
-isLeapYear.prototype.year = function(input) {
-
+  if (year % 400 == 0) {
+    return true;
+  } else if ((year % 4 == 0) && (year % 100 != 0)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 module.exports = isLeapYear;
